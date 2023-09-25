@@ -1,0 +1,80 @@
+@use 'variaveis';
+@use 'header';
+@use 'sinopse';
+@use 'members';
+@use 'gangs';
+
+@font-face {
+    font-family: Mersey Cowboy;
+    src: url(../../assets/fonts/mersey_cowboy.woff);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Mersey Cowboy, sans-serif;
+    list-style: none;
+}
+
+body {
+    background-color: variaveis.$corFundo;
+}
+
+.container {
+    padding: 64px 256px;
+    display: flex;
+    align-items: center;
+}
+
+@mixin text($fontSize: 20px) {
+    font-family: sans-serif;
+    font-size: $fontSize;
+    line-height: $fontSize + 10px;
+    color: variaveis.$corTextoSecundario;
+}
+
+@mixin title($fontSize: 72px) {
+    @include text($fontSize);
+    font-family: Mersey Cowboy;
+    color: variaveis.$corTextoPrincipal;
+    font-weight: normal;
+}
+
+.text {
+    @include text;
+}
+
+.text--small {
+    @include text(16px);
+    color: variaveis.$corTextoSecundario;
+}
+
+.title {
+    @include title;
+}
+
+.title--small {
+    @include title(24px);
+    font-family: sans-serif;
+    color: variaveis.$corTextoPrincipal;
+    line-height: normal;
+}
+
+.home,
+.director {
+    img {
+        max-height: 480px;
+        margin-top: 120px
+    }
+
+    &__content {
+        width: 960px;
+        padding-top: 80px;
+        padding-right: 256px;
+
+        p {
+            padding-bottom: 8px;
+        }
+    }
+}

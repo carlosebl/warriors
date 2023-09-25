@@ -1,0 +1,40 @@
+@use 'variaveis';
+
+.header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: variaveis.$corMenu;
+
+    &__container {
+        padding: 0 80px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__logo {
+        padding-top: 8px;
+
+        img {
+            height: 64px;
+        }
+    }
+
+    &__menu {
+
+        &__links {
+            display: inline-flex;;
+            padding-top: 20px;
+
+            &__item {
+                font-size: 40px;
+                margin-left: 80px;
+
+                a {
+                    text-decoration: none;
+                    color: variaveis.$corTextoPrincipal;
+                }
+            }
+        }
+    }
+}
