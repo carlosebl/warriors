@@ -3,6 +3,12 @@
         width: 960px;
         padding-top: 80px;
         padding-right: 256px;
+
+        @media (max-width: 768px) {
+            display: block;
+            width: 100%;
+            padding: 0;
+        }
         
         p {
             padding-bottom: 8px;

@@ -3,37 +3,26 @@
 .header {
     position: sticky;
     top: 0;
-    left: 0;
-    background-color: variaveis.$corMenu;
+    right: 0;
+    background-color: transparent;
 
     &__container {
-        padding: 0 80px;
+        padding: 0 24px;
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-end;
+
+        @media (max-width: 1024px) {
+            display: none;
+        }
     }
 
     &__logo {
         padding-top: 8px;
 
-        img {
-            height: 64px;
-        }
-    }
-
-    &__menu {
-
-        &__links {
-            display: inline-flex;;
-            padding-top: 20px;
-
-            &__item {
-                font-size: 40px;
-                margin-left: 80px;
-
-                a {
-                    text-decoration: none;
-                    color: variaveis.$corTextoPrincipal;
-                }
+        &__link {
+            img {
+                height: 64px;
+                margin-left: 256px;
             }
         }
     }

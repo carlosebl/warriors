@@ -25,6 +25,12 @@ body {
     padding: 64px 256px;
     display: flex;
     align-items: center;
+
+    @media (max-width: 1024px) {
+        display: block;
+        width: 100%;
+        padding: 8px;
+    }
 }
 
 @mixin text($fontSize: 20px) {
@@ -72,6 +78,12 @@ body {
         width: 960px;
         padding-top: 80px;
         padding-right: 256px;
+
+        @media (max-width: 1024px) {
+            display: block;
+            width: 100%;
+            padding-right: 0;
+        }
 
         p {
             padding-bottom: 8px;

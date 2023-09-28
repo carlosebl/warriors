@@ -4,10 +4,20 @@
     &__content {
         padding-top: 80px;
         padding-right: 256px;
+
+        @media (max-width: 1024px) {
+            display: block;
+            width: 100%;
+            padding: 0;
+        }
     }
 
     &__tabs {
         display: flex;
+
+        @media (max-width: 1024px) {
+            display: block;
+        }
 
         &__button {
             display: flex;
@@ -21,6 +31,11 @@
             color: variaveis.$corTextoSecundario;
             cursor: pointer;
             border: none;
+
+            @media (max-width: 1024px) {
+                display: block;
+                justify-content: start;
+            }
 
             &--is-active {
                 text-decoration: underline;
@@ -37,6 +52,10 @@
 
         &--is-active {
             display: flex;
+
+            @media (max-width: 1024px) {
+                display: block;
+            }
         }
 
         img {
@@ -47,6 +66,10 @@
         &__description {
             display: block;
             margin-left: 80px;
+
+            @media (max-width: 1024px) {
+                margin-left: 0;
+            }
 
             p {
                 margin-bottom: 8px;
